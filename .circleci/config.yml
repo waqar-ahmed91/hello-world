@@ -36,3 +36,4 @@ workflows:
       - print_world:
           requires:
             - print_hello
+      - build
