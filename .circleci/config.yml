@@ -31,7 +31,8 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo world
+      - run: return 1 #echo world
+      - when: on_fail
   build:
     docker:
       - image: cimg/base:2020.01
