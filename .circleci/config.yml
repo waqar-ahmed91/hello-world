@@ -32,7 +32,10 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: return 1 #echo world
-      - when: on_fail
+      - run:
+          name: on error
+          command: echo "Hello error"
+          when: on_fail
   build:
     docker:
       - image: cimg/base:2020.01
