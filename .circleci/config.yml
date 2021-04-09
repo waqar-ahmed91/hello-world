@@ -20,10 +20,7 @@ jobs:
     docker: -image cimg/base:2020.01
     steps:
       - checkout
-      - run:
-        name: "echo my name"
-        command: |
-          echo $name
+      - run: echo $name
 
 workflows:
   # Name the workflow "welcome"
