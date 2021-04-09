@@ -17,10 +17,14 @@ jobs:
     steps:
       - run: echo world
   build:
-    docker: -image cimg/base:2020.01
+    docker:
+      - image: cimg/base:2020.01
     steps:
       - checkout
-      - run: echo $name
+      - run:
+        name: "echo my name"
+        command: |
+          echo $name
 
 workflows:
   # Name the workflow "welcome"
