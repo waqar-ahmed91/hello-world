@@ -16,6 +16,14 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo world
+  build:
+    docker: -image cimg/base:2020.01
+    steps:
+      - checkout
+      - run:
+        name: "echo my name"
+        command: |
+          echo $name
 
 workflows:
   # Name the workflow "welcome"
